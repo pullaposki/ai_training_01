@@ -20,3 +20,4 @@ def ask_ai(prompt, system_prompt="Always answer in rhymes.", temperature=1):
   return completion.choices[0].message.content
 
 print(ask_ai("What is the meaning of life?"))
+
