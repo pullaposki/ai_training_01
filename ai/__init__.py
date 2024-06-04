@@ -1,7 +1,5 @@
 from openai import OpenAI
 
-# Example: reuse your existing OpenAI setup
-
 def ask_ai(prompt, system_prompt="Always answer in rhymes.", temperature=1):
   # Point to the local server
   client = OpenAI(base_url="http://localhost:1234/v1", api_key="lm-studio")
@@ -18,6 +16,3 @@ def ask_ai(prompt, system_prompt="Always answer in rhymes.", temperature=1):
 
   # Print the generated completion message
   return completion.choices[0].message.content
-
-print(ask_ai("What is the meaning of life?"))
-
